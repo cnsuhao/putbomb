@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __CONTRLLLAYER_H__
+#define __CONTRLLLAYER_H__
 #include"cocos2d.h"
 using namespace cocos2d;
 
@@ -29,4 +30,4 @@ private:
 	SneakyJoystickSkinnedBase* skinBase;
 	CCSize winsize;
 };
-
+#endif

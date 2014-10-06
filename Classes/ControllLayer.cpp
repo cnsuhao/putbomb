@@ -21,7 +21,7 @@ bool ControllLayer::init()
 	touchStick->setHasDeadzone(true);
 	touchStick->setDeadRadius(20);
 	skinBase=SneakyJoystickSkinnedBase::create();
-	skinBase->init();
+	//skinBase->init();
 	CCSprite* backGroundSprite=CCSprite::create("icon_touch.png");
 	CCSprite* thumbSprite=CCSprite::create("icon_touch_down.png");
 	skinBase->setBackgroundSprite(backGroundSprite);

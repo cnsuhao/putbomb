@@ -6,4 +6,3 @@ bool TouchButton::init()
 	this->scheduleUpdate();
 	return true;
 }
-void TouchButton::init()

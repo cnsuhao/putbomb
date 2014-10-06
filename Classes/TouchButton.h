@@ -5,7 +5,7 @@ class TouchButton :
 {
 public:
 	CREATE_FUNC(TouchButton);
-	void update(float delta);
+	//void update(float delta);
 	bool init();
 };
 

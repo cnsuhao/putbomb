@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __GameData__H
+#define __GameData__H
 typedef unsigned char       BYTE;
 typedef unsigned short      WORD;
 //ªÒµ√’®µØ
@@ -30,8 +31,7 @@ typedef unsigned short      WORD;
 #define  OPRATION_PUT_ICE 0X04
 //Ãﬂ∆’Õ®’®µØ
 #define  OPRATION_HIT_NORMAL_BOMB 0x05
-
-typedef enum TileType{TileTypeIron=1,TileTypeTile,TileTypePerson}TileType;
+enum TileType{TileTypeIron=1,TileTypeTile,TileTypePerson};
 
 #define TILE_WITH 32
 #define TILE_HEIGHT 34
@@ -42,6 +42,16 @@ typedef enum TileType{TileTypeIron=1,TileTypeTile,TileTypePerson}TileType;
 #define  PERSON_RIGHT_DOWN 0X103
 #define  PERSON_RIGHT_UP 0X104
 
+class GameData
+{
+public :
+	GameData();
+	static char(*(getGameMapMatrix()))[50]; 
+	static void setMatrixValue(const int & row,const int & col,const int & value);
+	static char getMatrixValue(const int & row,const int & col);
+private:
+	static char Matrix[30][50];
+};
 struct GameDataDiagram
 {
 	BYTE who;
@@ -51,12 +61,4 @@ struct GameDataDiagram
 	GameDataDiagram(BYTE w,WORD x,WORD y,BYTE op);
 };
 
-class GameData
-{
-public :
-	static char(*(getGameMapMatrix()))[50]; 
-	static void setMatrixValue(const int & row,const int & col,const int & value);
-	static char getMatrixValue(const int & row,const int & col);
-private:
-	static char m_Matrix[30][50];
-};
+#endif
